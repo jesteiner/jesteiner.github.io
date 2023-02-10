@@ -28,7 +28,9 @@ const options = {
 };
 
 fetch('https://weatherapi-com.p.rapidapi.com/forecast.json?q=London&days=3', options)
-	.then(data => response.json())
+	.then((response) => {
+      return response.json();
+    })
 	.then((data) => {
         const body = document.getElementById('body');
         body.innerHTML = data;
